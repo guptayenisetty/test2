@@ -1,0 +1,500 @@
+   55  git init precommit
+   56  cd precommit/
+   57  echo first file > first.txt
+   58  git add .
+   59  git status
+   60  git commit -m"new commit"
+   61  git config --list
+   62  git commit -m"new commit"
+   63  git commit
+   64  echo hi > hi.txt
+   65  git status
+   66  git add .
+   67  git commit
+   68  ls -l .git/hooks/
+   69  chomd -R 777 .git/hooks/
+   70  chmod -R 777 .git/hooks/
+   71  ls -l .git/hooks/
+   72  chmod -r 777 .git/hooks/
+   73  chmod 777 .git/hooks/
+   74  ls -l .git/hooks/
+   75  echo hi > hi.txt
+   76  git status
+   77  git status
+   78  echo hi >> hi.txt
+   79  git status
+   80  git add .
+   81  git commit
+   82  echo hi >> hi.txt
+   83  git add .
+   84  git commit
+   85  git commit -m "new commit"
+   86  git status
+   87  echo hi >> hi.txt
+   88  git add .
+   89  git commit -m "new commit"
+   90  echo hi >> hi.txt
+   91  git status
+   92  git commit -m "new commit"
+   93  git add .
+   94  git commit -m "new commit"
+   95  echo hi
+   96  ls -l
+   97  cd .git/hooks/
+   98  chmod +x pre-commit
+   99  ls
+  100  ls -l
+  101  cd ..
+  102  cd ..
+  103  echo hi >> hi.txt
+  104  git status
+  105  git add hi.txt 
+  106  git commit -m"hi"
+  107  echo hi >> hi.txt
+  108  git status
+  109  git add hi.txt 
+  110  git commit -m"hi"
+  111  git --version
+  112  echo hi >> hi.txt
+  113  git add hi.txt 
+  114  git commit -m"hi"
+  115  exit
+  116  git status
+  117  git checkout master
+  118  git branch -v
+  119  git checkout -b crBranch
+  120  git config --list
+  121  git config --list|grep core
+  122  git diff --cached --name-only --diff-filter=ACM
+  123  git diff
+  124  git status
+  125  sed -e 's#^#`git --version`#' hi.txt 
+  126  git --version
+  127  sed -e 's#^#`$(git --version)`#' hi.txt 
+  128  sed -e 's#^#`echo this`#' hi.txt 
+  129  mine=this
+  130  echo $mine
+  131  $mine
+  132  echo hi.txt 
+  133  echo hi me>>hi.txt 
+  134  echo hi.txt 
+  135  git status
+  136  git rm hi.txt 
+  137  git status
+  138  ls -l
+  139  chmod 777 .
+  140  ls -l
+  141  chmod -R 777 .
+  142  ls -l
+  143  cd ..
+  144  chmod -R 777 precommit/
+  145  cd precommit/
+  146  ls -l
+  147  ls -l
+  148  exit
+  149  git status
+  150  echo git hi > hi.txt 
+  151  git status
+  152  git add hi.txt 
+  153  git status
+  154  git commit -m"test"
+  155  git status
+  156  git commit -m"test"
+  157  git status
+  158  git add ejb/CalendarBean.java 
+  159  git status
+  160  git commit -m"test"
+  161  git status
+  162  git commit -m"test"
+  163  git status
+  164  grep version.number build/build.xml
+  165  grep ="version.number"  build/build.xml
+  166  grep version.number -v ${version.number} build/build.xml
+  167  grep version.number build/build.xml | grep -v ${version.number}
+  168  git status
+  169  echo git hi > hi.txt 
+  170  git status
+  171  git add hi.txt 
+  172  git status
+  173  git commit -m"test"
+  174  git status
+  175  git commit -m"test"
+  176  git status
+  177  git add ejb/CalendarBean.java 
+  178  git status
+  179  git commit -m"test"
+  180  git status
+  181  git commit -m"test"
+  182  git status
+  183  grep version.number build/build.xml
+  184  grep ="version.number"  build/build.xml
+  185  grep version.number -v ${version.number} build/build.xml
+  186  grep version.number build/build.xml | grep -v ${version.number}
+  187  grep version.number build/build.xml | grep -v "${version.number}"
+  188  cd d:/
+  189  cd test/
+  190  git remote -vv
+  191  exit
+  192  git status
+  193  git commit -m"tst"
+  194  git commit --amend
+  195  git commit --amend
+  196  printenv | grep -i HOME
+  197  git commit --amend
+  198  exit
+  199  cd d:/
+  200  cd test/
+  201  git clone ssh://git@stash.jda.com:7999/cbr/githooks.git
+  202  ls -la
+  203  cd githooks/
+  204  ls -la
+  205  ls -la
+  206  git status
+  207  git add .
+  208  git status
+  209  git commit -m"DS-14964"
+  210  git log 
+  211  git remote -v
+  212  git push
+  213  cd $HOME
+  214  echo $HOME
+  215  ls -l
+  216  ls -l | grep -i hook
+  217  cd D:/
+  218  cd test
+  219  cd venkat/
+  220  ls
+  221  cd precommit/
+  222  git status
+  223  git commit -m"test"
+  224  git commit -m"test"
+  225  git commit --amend
+  226  git commit --amend
+  227  git commit --amend
+  228  ls -l $HOME/githooks/.git
+  229  git commit --amend
+  230  exit
+  231  git pull --prune
+  232  pwd
+  233  exit
+  234  cd precommit
+  235  git status
+  236  git commit -m"test"
+  237  git add utilities/srcmaintutils/pre-commit
+  238  git status
+  239  git commit -m"test"
+  240  git commit -m"test"
+  241  cd precommit
+  242  git status
+  243  git commit -m"test"
+  244  git commit -m"test"
+  245  git commit -m"test"
+  246  git status
+  247  git commit -m"test"
+  248  git commit -m"test"
+  249  git commit -m"test"
+  250  git reset --soft HEAD~1
+  251  git status
+  252  git add build/build.xml
+  253  git add build/build.xml
+  254  git status
+  255  git add build/build.xml
+  256  git status
+  257  git status
+  258  git add ejb/Calendar.java 
+  259  git status
+  260  git commit -m"test"
+  261  git log -1
+  262  git status
+  263  git commit -m"test"
+  264  git status
+  265  git commit -m"test"
+  266  git commit -m"test"
+  267  git commit -m"test"
+  268  ls
+  269  cd d:/
+  270  cd test
+  271  ls
+  272  ls -l
+  273  mkdir new_git
+  274  cd new_git/
+  275  ls -la
+  276  git init Jersy
+  277  cd Jersy/
+  278  ls -la
+  279  cd ..
+  280  cd Jersy/
+  281  cd ..
+  282  git init california
+  283  cd california/
+  284  ls -la
+  285  cd ..
+  286  cd Jersy/
+  287  git init test
+  288  cd test/
+  289  cd ..
+  290  ls -la
+  291  rm -r test/
+  292  ls -la
+  293  git status
+  294  cd ..
+  295  git status
+  296  cd Jersy/
+  297  git status
+  298  git add busentity/CalendarDBColumns.java 
+  299  git status
+  300  git status
+  301  git add busentity/CalendarDBColumns.java 
+  302  git status
+  303  git commit
+  304  git log
+  305  git version
+  306  git branch
+  307  git branch 2017
+  308  git branch
+  309  git checkout 2017
+  310  git status
+  311  cd Jersy/
+  312  cd ..
+  313  exit
+  314  git status
+  315  git log
+  316  git log -1
+  317  git log -2
+  318  git log -3
+  319  git pull --prune
+  320  git log -1
+  321  git commit -am"test1"
+  322  git reset 149a37ec0596c6
+  323  git status -uno
+  324  git reset --hard
+  325  git status -uno
+  326  git pull 
+  327  exit
+  328  git remote -v
+  329  cd ..
+  330  git init hyd
+  331  cd hyd
+  332  git remote -v
+  333  git status
+  334  git remote -v
+  335  gir remote
+  336  git remote
+  337  git remote -v
+  338  git push origin master
+  339  git branch branch_one
+  340  git push origin branch_one
+  341  git branch -v
+  342  git branch -vv
+  343  git checkout branch_one
+  344  echo branch_one branch1.txt
+  345  git commit -am"branch commit"
+  346  git status
+  347  echo branch_one >branch1.txt
+  348  git commit -am"branch commit"
+  349  git add .
+  350  git commit -m"branch one first commit"
+  351  git push origin branch_one
+  352  git log -2
+  353  git log
+  354  who
+  355  hostname
+  356  git config user
+  357  git config --list|grep -i user
+  358  git log -1
+  359  clear
+  360  git log -1
+  361  git log
+  362  git push origin branch_one
+  363  git push
+  364  git branch -v
+  365  git push --set-upstream origin branch_one
+  366  git branch -vv
+  367  git push
+  368  git remote -v
+  369  git log -2
+  370  ls
+  371  echo abcd>>branch1.txt 
+  372  git status
+  373  git add .
+  374  git commit -m"test"
+  375  git log
+  376  git log -2
+  377  git reset --hard HEAD~1
+  378  git log -1
+  379  echo abcd>>branch1.txt 
+  380  git add .
+  381  git commit -m"test"
+  382  git statu
+  383  sgit status
+  384  git status
+  385  git reset --soft HEAD~1
+  386  git status
+  387  git reset HEAD
+  388  git status
+  389  git clone https://github.com/srinu8586/Bhavya.git
+  390  cd Bhavya/
+  391  ls
+  392  echo hi >> jhi.txt 
+  393  git commit -a -m"test"
+  394  git status
+  395  git push
+  396  git tag -l
+  397  cd ../test
+  398  cd ../../test/
+  399  git tag -l
+  400  git tag -l
+  401  git tag -l
+  402  git clone http://j1016711@stash.jda.com/scm/cbr/bom.git
+  403  git --version
+  404  cd test/
+  405  ls
+  406  cd FirstGit/
+  407  ls
+  408  git config user.name
+  409  git config user.name "Bhaker.Amiredy"
+  410  git config user.name
+  411  git config user.name "Srinath Ponnam"
+  412  git config user.name
+  413  exit
+  414  git --version
+  415  git pull --prune
+  416  git branch --merged
+  417  git branch --no-merged
+  418  git branch
+  419  git branch -vv
+  420  git merge issue53
+  421  git merge test_branch
+  422  git branch --merged
+  423  git push
+  424  git config credential.helper cache
+  425  sudo
+  426  sudo
+  427  git inti test
+  428  git init test
+  429  cd test/
+  430  echo hi >test.txt
+  431  git add .
+  432  git commit -m"test'
+  433  git commit -m"test"
+  434  ls
+  435  git statu
+  436  git status
+  437  git checkout -b 2ndbranch
+  438  git checkout master
+  439  echo krishna krishna.txt
+  440  git checkout 2ndbranch
+  441  git merge master
+  442  git checkcout master
+  443  git checkout master
+  444  git status
+  445  git log -2
+  446  echo krishna krishna.txt
+  447  git status
+  448  echo krishna >krishna.txt
+  449  git status
+  450  git add .
+  451  git commit -m"test1'
+  452  git commit -m"test1"
+  453  git status
+  454  git checkout 2ndbranch
+  455  git merge master
+  456  git log -2
+  457  git log
+  458  cd u:
+  459  mkdir srinath
+  460  cd srinath/
+  461  git clone ssh://git@stash.jda.com:7999/cbr/test.git
+  462  ls
+  463  cd test/
+  464  ls
+  465  echo this is merger test >> sri.txt 
+  466  git add .
+  467  git commit -m"test"
+  468  git pull
+  469  git status
+  470  git commit -a -m"test"
+  471  git status
+  472  git push
+  473  git add .
+  474  git commit -m"this is 2nd test"
+  475  git push
+  476  git push
+  477  git pull
+  478  git pull
+  479  git status
+  480  git add .
+  481  git status
+  482  git commit -m"test 2"
+  483  git status
+  484  git push
+  485  git init test
+  486  cd test/
+  487  echo hi >test.txt
+  488  git status
+  489  git add test.txt 
+  490  git commit -m"test"
+  491  git status
+  492  git rm test.txt
+  493  git status
+  494  cd ..
+  495  rm test
+  496  exit
+  497  git remote -v
+  498  git remote -v
+  499  cd ..
+  500  rm -rf test
+  501  rm -rf test
+  502  git init Pavan
+  503  cd Pavan/
+  504  echo hi>hi.txt
+  505  git status
+  506  git add hi.txt
+  507  git status
+  508  git commit -m"test"
+  509  git status
+  510  echo second > 2.txt
+  511  git status
+  512  git add *
+  513  git status
+  514  git commit -m"test"
+  515  git status
+  516  echo this is first git file > hi.txt
+  517  echo 3rdfile>3.txt
+  518  git status
+  519  git add .
+  520  git status
+  521  echo again changeed >> hi.txt
+  522  git status
+  523  git checkout hi.txt
+  524  git status
+  525  git reset HEAD
+  526  git status
+  527  git reset HEAD --hard
+  528  git status
+  529  echo again changeed >> hi.txt
+  530  echo hi.txt 
+  531  git clone ssh://git@stash.jda.com:7999/olap/pivotmdap.git
+  532  git branch first_branch
+  533  git branch 
+  534  git checkout first_branch
+  535  git branch 
+  536  git checkout master
+  537  git status
+  538  git commit -m "java file"
+  539  git checkout first_branch
+  540  git checkout master
+  541  git checkout first_branch
+  542  git merge master
+  543  git checkout master
+  544  git log 
+  545  git log -1
+  546  git log -2
+  547  git diff
+  548  echo again changeed >> hi.txt
+  549  git diff
+  550  git diff bc8ac2013..64ceb3d49b
+  551  git checkout -b second_branch
+  552  git status
+  553  history
+  554  history > history.txt
